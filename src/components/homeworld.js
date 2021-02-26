@@ -12,8 +12,8 @@ class Homeworld extends React.Component {
     }
     componentDidMount() {
 
-        const url = this.props.homeworld.replace(/http/,"https");
-        if (url !== null) {
+        if (this.props.homeworld !== null) {
+            const url = this.props.homeworld.replace(/http/, "https");
             axios.get(url).then((respons) => {
 
                 this.setState({
